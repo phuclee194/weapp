@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>
+        Welcome to Robot Guide 
+    </title>
+    <style>
+        body {
+            font-family: arial,verdana,sans-serif,Georgia, "Times New Roman", Times, serif;
+            text-align: center;
+            background: #cceeff;
+        }
+
+        h1 {
+            text-shadow: 5px 5px 5px #aaaaaa;
+        }
+    </style>
+
+  
+     </head>
+<body>
+    <h1>Welcome to Robot Gudie</h1>
+    <p>Please select where do you want to go</p>
+    <button onclick="library()">LIBRARY</button>
+    <button onclick="studentaffair()">STUDENT AFFAIR</button>
+    <button onclick="lab()">LAB</button>
+    <button onclick="canteen()">CANTEEN</button>
+
+</body>
+
+
+
+<script>
+
+    var xmlhttp;
+    xmlhttp = new XMLHttpRequest();
+
+
+    function library() {
+        xmlhttp.open("GET", "cgi-bin/library.cgi", true);
+        xmlhttp.send();
+    }
+    function studentaffair() {
+        xmlhttp.open("GET", "cgi-bin/studentaffair.cgi", true);
+        xmlhttp.send();
+    }
+    function lab() {
+
+        xmlhttp.open("GET", "cgi-bin/lab.cgi", true);
+        xmlhttp.send();
+    }
+    function canteen() {
+        xmlhttp.open("GET", "cgi-bin/canteen.cgi", true);
+        xmlhttp.send();
+    }
+
+
+
+</script>
+
+</html>
